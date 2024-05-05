@@ -9,7 +9,7 @@ variable "resource_group_location" {
 
 variable "storage_account_name" {
 	type = string
-	default = "storageaccountname"
+	default = "storageaccountnamewsbpp"
 }
 
 variable "resource_group_account_tier" {
@@ -54,7 +54,7 @@ variable "app_function_name" {
 
 variable "app_function_config_json" {
 	type = string
-	default = jsonencode({
+	default = <<EOF
     "bindings" = [
       {
         "authLevel" = "function"
@@ -72,13 +72,19 @@ variable "app_function_config_json" {
         "type"      = "http"
       },
     ]
-  })
+  EOF
 }
+
 variable "app_function_test_data" {
 	type = string
-	default = jsonencode({
+	default = <<EOF
     "name" = "Azure"
-  })
+ EOF
+}
+
+variable "app_function_language" {
+	type = string
+	default = "Python"
 }
 
 

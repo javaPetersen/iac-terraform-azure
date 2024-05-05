@@ -39,8 +39,8 @@ resource "azurerm_function_app_function" "app_function" {
   name            = var.app_function_name
   function_app_id = azurerm_linux_function_app.linux-function-app.id
   language        = var.app_function_language
-  test_data = var.app_function_test_data
-  config_json = var.app_function_config_json
+  test_data = jsonencode("${var.app_function_test_data}")
+  config_json = jsonencode("${var.app_function_config_json}")
 }
 
 
