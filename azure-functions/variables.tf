@@ -12,17 +12,17 @@ variable "storage_account_name" {
 	default = "storageaccountnamewsbpp"
 }
 
-variable "resource_group_account_tier" {
+variable "storage_account_account_tier" {
 	type = string
 	default = "Standard"
 }
 
-variable "resource_group_account_replication_type" {
+variable "storage_account_account_replication_type" {
 	type = string
 	default = "GRS"
 }
 
-variable "resource_group_tags_env" {
+variable "storage_account_tags_env" {
 	type = string
 	default = "staging"
 }
@@ -55,6 +55,7 @@ variable "app_function_name" {
 variable "app_function_config_json" {
 	type = string
 	default = <<EOF
+	
     "bindings" = [
       {
         "authLevel" = "function"
