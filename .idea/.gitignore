@@ -1,0 +1,29 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore .terraform.lock.hcl if present
+.terraform.lock.hcl
+
+# .tfvars files that are required for proper working of the configurations
+*.auto.tfvars
+*.auto.tfvars.json
+*.tfvars
+
+# .terraform directories
+terraform.tfstate.d
+.idea/
